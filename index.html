@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" typeof="bibo:Document w3p:REC" prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
   <head>
     <meta property="dc:language" content="en" lang="">
-    <title>Vibration API</title>
+    <title>振动接口</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <style>/*****************************************************************
       * ReSpec 3 CSS
@@ -448,61 +448,49 @@
       </p>
     </section>
     <section id="sotd" class="introductory">
-      <h2 resource="#h-sotd" id="h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+      <h2 resource="#h-sotd" id="h-sotd"><span property="xhv:role" resource="xhv:heading">本文档状态</span></h2>
       <p>
-        <em>This section describes the status of this document at the time of its publication.
-        Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
-        latest revision of this technical report can be found in the <a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
-        http://www.w3.org/TR/.</em>
-      </p>
-      <p>No changes were brought to the document since its publication as a <a href="http://www.w3.org/TR/2014/PR-vibration-20141209/">Proposed Recommendation</a>.</p>
-      <p>By publishing this Recommendation, W3C expects that the functionality
-        specified in this document will not be affected by changes to Web IDL as
-        it proceeds to Recommendation.
+        <em>本节描述本文档发布时状态，其他文档可能取代本文档。 <abbr title="World Wide Web Consortium">W3C</abbr> 最新发布的技术报告，
+        以及本技术报告的最新版本， 参见 <a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> 技术报告索引：</a>
+        http://www.w3.org/TR/</em>。
       </p>
       <p>
-        This document represents the consensus of the group on the scope and
-        features of the Vibration API. It should be noted that the group is
-        aware of more advanced use cases that cannot be realized using this
-        simpler first version. The intent is to address them in a future
-        revision.
+        自发布<a href="http://www.w3.org/TR/2014/PR-vibration-20141209/">提案推荐标准</a>以来，本文档没有任何新的改变。
       </p>
       <p>
-        This document was published by the <a href="http://www.w3.org/2009/dap/">Device APIs Working Group</a> as a Recommendation.
-        If you wish to make comments regarding this document, please send them to 
+        W3C 期望通过发布该推荐标准，其所规范的功能不受 Web IDL 规范通往推荐标准的过程所影响。
+      </p>
+      <p>
+        本文档代表该小组在振动接口这一范围和特性的共识。应当指出的是，工作组意识到了
+        无法使用这一简单的第一个版本规范来实现更先进的使用案例。留待未来的修订来解决它们。
+      </p>
+      <p>
+        本文档由<a href="http://www.w3.org/2009/dap/">设备接口工作组</a>发布为推荐标准。
+        关于本文档的任何反馈意见，请发送至工作组邮件列表： 
         <a href="mailto:public-device-apis@w3.org">public-device-apis@w3.org</a> 
-        (<a href="mailto:public-device-apis-request@w3.org?subject=subscribe">subscribe</a>,
-        <a href="http://lists.w3.org/Archives/Public/public-device-apis/">archives</a>).
-        All comments are welcome.
+        （<a href="mailto:public-device-apis-request@w3.org?subject=subscribe">订阅</a>,
+        <a href="http://lists.w3.org/Archives/Public/public-device-apis/">归档</a>）。
+        欢迎反馈。
       </p>
       <p>
-        Please see the Working Group's  <a href="http://w3c.github.io/test-results/vibration/20141118.html">implementation
-        report</a>.
+        请参阅工作的<a href="http://w3c.github.io/test-results/vibration/20141118.html">实现报告</a>。
       </p>
       <p>
-        This document has been reviewed by <abbr title="World Wide Web Consortium">W3C</abbr> Members, by software developers, and by other <abbr title="World Wide Web Consortium">W3C</abbr>
-        groups and interested parties, and is endorsed by the Director as a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-        It is a stable document and may be used as reference material or cited from another
-        document. <abbr title="World Wide Web Consortium">W3C</abbr>'s role in making the Recommendation is to draw attention to the
-        specification and to promote its widespread deployment. This enhances the functionality
-        and interoperability of the Web.
+        本文档已由 <abbr title="World Wide Web Consortium">W3C</abbr> 成员、软件开发者、 <abbr title="World Wide Web Consortium">W3C</abbr>
+        工作组和有关各方审阅，并由 <abbr title="World Wide Web Consortium">W3C</abbr> 理事会批准为推荐标准。
+        此为稳定的文档，可以用作参考文献或从另一个文件中引用。
+        <abbr title="World Wide Web Consortium">W3C</abbr> 制定推荐标准的任务是使之受到关注，并促使其被广泛使用。这将增强 Web 的功能性与互操作性。
       </p>
       <p>
-        This document was produced by a group operating under the 
-        <a id="sotd_patent" property="w3p:patentRules" href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-        Policy</a>.
-        <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="http://www.w3.org/2004/01/pp-impl/43696/status" rel="disclosure">public list of any patent
-        disclosures</a> 
-        made in connection with the deliverables of the group; that page also includes
-        instructions for disclosing a patent. An individual who has actual knowledge of a patent
-        which the individual believes contains
-        <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
-        Claim(s)</a> must disclose the information in accordance with
-        <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
-        6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        本文档由一个遵循 
+        <a id="sotd_patent" property="w3p:patentRules" href="http://www.w3.org/Consortium/Patent-Policy-20040205/">2004年2月5日 <abbr title="World Wide Web Consortium">W3C</abbr> 专利政策</a>的小组创作。
+        <abbr title="World Wide Web Consortium">W3C</abbr> 维护着一个与工作组交付产品相关的<a href="http://www.w3.org/2004/01/pp-impl/43696/status" rel="disclosure">已公开的专利列表</a>；该列表页面还包括如何公开一项专利的说明。
+        对某专利拥有实际知识并相信该专利包含了
+        <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">基本要求</a>的个人，必须根据
+        <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure"> <abbr title="World Wide Web Consortium">W3C</abbr> 专利政策第6节</a>的要求公开这些信息。
       </p>
       <p>
-        This document is governed by the  <a id="w3c_process_revision" href="http://www.w3.org/2005/10/Process-20051014/">14 October 2005 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+        本文档受制于<a id="w3c_process_revision" href="http://www.w3.org/2005/10/Process-20051014/">2005年10月14日 <abbr title="World Wide Web Consortium">W3C</abbr> 过程文档</a>。
       </p>
     </section>
     <section id="toc">
@@ -736,11 +724,9 @@ navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span 
       <!--OddPage-->
       <h2 resource="#h-acknowledgements" id="h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>致谢</span></h2>
       <p>
-        The group is deeply indebted to Justin Lebar, Mounir Lamouri, Jonas
-        Sicking, and the Mozilla WebAPI team for their contributions, and for
-        providing the WebVibrator prototype as an initial input. Thanks to
-        Anne van Kesteren for suggestions on how to make the specification
-        reusable in other contexts.
+        工作组非常感谢 Justin Lebar、Mounir Lamouri、Jonas
+        Sicking 和 Mozilla WebAPI 团队的贡献和提供 WebVibrator 原型作为初始输入。
+        感谢 Anne van Kesteren 建议如何使规范在其他文中被重用。
       </p>
     </section>
     <section property="bibo:hasPart" resource="#references" typeof="bibo:Chapter" id="references" class="appendix">
