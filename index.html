@@ -442,10 +442,9 @@
       <hr>
     </div>
     <section property="dc:abstract" class="introductory" id="abstract">
-      <h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>
+      <h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">摘要</span></h2>
       <p>
-        This specification defines an API that provides access to the vibration
-        mechanism of the hosting device. Vibration is a form of tactile feedback.
+        本规范定义了一个 API，它提供了访问托管设备的振动机制。振动是一种触觉反馈。
       </p>
     </section>
     <section id="sotd" class="introductory">
@@ -507,277 +506,235 @@
       </p>
     </section>
     <section id="toc">
-      <h2 resource="#h-toc" id="h-toc" class="introductory"><span property="xhv:role" resource="xhv:heading">Table of Contents</span></h2>
+      <h2 resource="#h-toc" id="h-toc" class="introductory"><span property="xhv:role" resource="xhv:heading">目录</span></h2>
       <ul id="respecContents" role="directory" class="toc">
-        <li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li>
-        <li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>Conformance</a></li>
-        <li class="tocline"><a class="tocxref" href="#terminology"><span class="secno">3. </span>Terminology</a></li>
-        <li class="tocline"><a class="tocxref" href="#vibration-interface"><span class="secno">4. </span>Vibration Interface</a></li>
-        <li class="tocline"><a class="tocxref" href="#examples"><span class="secno">5. </span>Examples</a></li>
-        <li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>Acknowledgements</a></li>
+        <li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>引言</a></li>
+        <li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>一致性</a></li>
+        <li class="tocline"><a class="tocxref" href="#terminology"><span class="secno">3. </span>术语</a></li>
+        <li class="tocline"><a class="tocxref" href="#vibration-interface"><span class="secno">4. </span>振动接口</a></li>
+        <li class="tocline"><a class="tocxref" href="#examples"><span class="secno">5. </span>示例</a></li>
+        <li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>致谢</a></li>
         <li class="tocline">
-          <a class="tocxref" href="#references"><span class="secno">B. </span>References</a>
+          <a class="tocxref" href="#references"><span class="secno">B. </span>参考文献</a>
           <ul class="toc">
-            <li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">B.1 </span>Normative references</a></li>
-            <li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">B.2 </span>Informative references</a></li>
+            <li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">B.1 </span>规范性参考文献</a></li>
+            <li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">B.2 </span>信息性参考文献</a></li>
           </ul>
         </li>
       </ul>
     </section>
     <section property="bibo:hasPart" resource="#introduction" typeof="bibo:Chapter" id="introduction" class="informative">
       <!--OddPage-->
-      <h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction</span></h2>
-      <p><em>This section is non-normative.</em></p>
+      <h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>引言</span></h2>
+      <p><em>本章节不具有规范性。</em></p>
       <p>
-        The API is specifically designed to address use cases that require
-        simple tactile feedback only. Use cases requiring more fine-grained
-        control are out of scope for this specification. This API is not meant
-        to be used as a generic notification mechanism. Such use cases may be
-        handled using the <cite>Notifications API</cite> [<cite><a href="#bib-NOTIFICATIONS" class="bibref">NOTIFICATIONS</a></cite>]
-        specification. In addition, determining whether vibration is enabled
-        is out of scope for this specification.
+        振动 API 专门设计用于仅需简单触觉反馈的用例场景。那些需要细粒度控制的用例场景超出了本规范的范围。
+        该 API 并非用于通用的通知机制。通用的通知可使用<cite>通知 API</cite>
+        [<cite><a href="#bib-NOTIFICATIONS" class="bibref">NOTIFICATIONS</a></cite>]
+        规范来处理。此外，决定是否启用振动也超出了本规范的范围。 
       </p>
     </section>
     <section property="bibo:hasPart" resource="#conformance" typeof="bibo:Chapter" id="conformance">
       <!--OddPage-->
-      <h2 resource="#h-conformance" id="h-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Conformance</span></h2>
+      <h2 resource="#h-conformance" id="h-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>一致性</span></h2>
       <p>
-        As well as sections marked as non-normative, all authoring guidelines, diagrams, examples,
-        and notes in this specification are non-normative. Everything else in this specification is
-        normative.
+        像其他不具有规范性的章节一样，本规范中所有指导方案、图表、示例以及注解都不具有规范性。
+        本规范中其余部分均具有规范性。 
       </p>
-      <p id="respecRFC2119">The key words <em class="rfc2119" title="MAY">MAY</em> and <em class="rfc2119" title="MUST">MUST</em> are 
-        to be interpreted as described in [<cite><a href="#bib-RFC2119" class="bibref">RFC2119</a></cite>].
+      <p id="respecRFC2119">关键词<em class="rfc2119" title="MAY">可以</em>和<em class="rfc2119" title="MUST">必须</em>的释义由 [<cite><a href="#bib-RFC2119" class="bibref">RFC2119</a></cite>]进行解释。
       </p>
       <p>
-        This specification defines conformance criteria that apply to a single
-        product: the <dfn id="ua">user agent</dfn> that implements the
-        interfaces that it contains.
+        本规范所定义的一致性标准条件仅适用于实现了规范所包含接口的<dfn id="ua">用户代理</dfn>。
       </p>
       <p>
-        Implementations that use ECMAScript to implement the APIs defined in
-        this specification must implement them in a manner consistent with the
-        ECMAScript Bindings defined in the Web IDL specification [<cite><a href="#bib-WEBIDL" class="bibref">WEBIDL</a></cite>],
-        as this specification uses that specification and terminology.
+        由于本规范使用了 WebIDL 规范及其术语，因此如果使用 ECMA 脚本对本规范定义的应用程序接口进行实现，
+        则必须保持实现与 ECMA 脚本绑定定义的 WebIDL 规范 [<cite><a href="#bib-WEBIDL" class="bibref">WEBIDL</a></cite>]相一致。 
       </p>
     </section>
     <section property="bibo:hasPart" resource="#terminology" typeof="bibo:Chapter" id="terminology">
       <!--OddPage-->
-      <h2 resource="#h-terminology" id="h-terminology"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Terminology</span></h2>
+      <h2 resource="#h-terminology" id="h-terminology"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>术语</span></h2>
       <p>
-        The concepts <dfn id="dfn-browsing-context"><a href="http://www.w3.org/TR/html5/browsers.html#browsing-context">
-        browsing context</a></dfn> and
+        <dfn id="dfn-browsing-context"><a href="http://www.w3.org/TR/html5/browsers.html#browsing-context">
+        browsing context</a></dfn> 和
         <dfn id="dfn-spin-the-event-loop"><a href="http://www.w3.org/TR/html5/webappapis.html#spin-the-event-loop">
-        spin the event loop</a></dfn> are defined in [<cite><a href="#bib-HTML5" class="bibref">HTML5</a></cite>].
+        spin the event loop</a></dfn> 的概念由 [<cite><a href="#bib-HTML5" class="bibref">HTML5</a></cite>] 规范定义。
       </p>
     </section>
     <section property="bibo:hasPart" resource="#vibration-interface" typeof="bibo:Chapter" id="vibration-interface">
       <!--OddPage-->
-      <h2 resource="#h-vibration-interface" id="h-vibration-interface"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Vibration Interface</span></h2>
+      <h2 resource="#h-vibration-interface" id="h-vibration-interface"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>振动接口</span></h2>
       <pre class="idl"><span class="idlInterface" id="idl-def-Navigator"><span class="idlTypedef" id="idl-def-VibratePattern">typedef <span class="idlTypedefType">(unsigned long or sequence&lt;unsigned long&gt;)</span> <span class="idlTypedefID">VibratePattern</span>;</span><br><br>partial interface <span class="idlInterfaceID">Navigator</span> {
 <span class="idlMethod">    <span class="idlMethType">boolean</span> <span class="idlMethName"><a href="#widl-Navigator-vibrate-boolean-VibratePattern-pattern">vibrate</a></span> (<span class="idlParam"><span class="idlParamType"><a class="idlType" href="#idl-def-VibratePattern"><code>VibratePattern</code></a></span> <span class="idlParamName">pattern</span></span>);</span>
 };</span></pre>
       <p>
-        The <code id="widl-Navigator-vibrate-boolean-VibratePattern-pattern">vibrate()</code>
-        method, when invoked, <em title="MUST" class="rfc2119">MUST</em> run the algorithm
-        for <a class="internalDFN" href="#dfn-processing-vibration-patterns">processing vibration patterns</a>.
+        当调用 <code id="widl-Navigator-vibrate-boolean-VibratePattern-pattern">vibrate()</code>
+        方法时，<em title="MUST" class="rfc2119">必须</em>运行 <a class="internalDFN" href="#dfn-processing-vibration-patterns">processing vibration patterns</a> 算法。
       </p>
       <p>
-        The rules for <dfn id="dfn-processing-vibration-patterns">processing vibration patterns</dfn> are as given in
-        the following algorithm:
+        <dfn id="dfn-processing-vibration-patterns">processing vibration patterns</dfn> 的算法的规则描述如下：
       </p>
       <ol>
         <li>
-          Let <var>pattern</var> be the first method argument of the
-          <code>vibrate()</code> method.
+          设 <var>pattern</var> 为 <code>vibrate()</code> 方法的第一个参数。
         </li>
         <li>
-          Let <var>valid pattern</var> be the result of passing
-          <var>pattern</var> to <a class="internalDFN" href="#dfn-validate-and-normalize">validate and normalize</a>.
+          设 <var>valid pattern</var> 为 <var>pattern</var> 参数进行 <a class="internalDFN" href="#dfn-validate-and-normalize">validate and normalize</a> 的结果。
         </li>
         <li>
-          If the <code>
+          如果 <code>
           <a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/PageVisibility/Overview.html#dom-document-hidden">
-          hidden</a></code> attribute [<cite><a href="#bib-PAGE-VISIBILITY" class="bibref">PAGE-VISIBILITY</a></cite>] is set to true,
-          then return false and terminate these steps.
+          hidden</a></code> 属性值 [<cite><a href="#bib-PAGE-VISIBILITY" class="bibref">PAGE-VISIBILITY</a></cite>] 设置为 true，则返回 false 并终止所有步骤。
           <div class="note">
-            <div id="h-note1" role="heading" aria-level="3" class="note-title"><span>Note</span></div>
+            <div id="h-note1" role="heading" aria-level="3" class="note-title"><span>注</span></div>
             <div class="">
-              A trusted (also known as privileged) application that integrates
-              closely with the operating system's functionality may vibrate the
-              device even if such an application is not visible at all, and thus
-              may ignore the previous step.
+              可信（也称授权）应用程序因为与操作系统功能集成紧密，即使完全不可见，也可能产生设备振动，
+              因此可以忽略前述步骤。
             </div>
           </div>
         </li>
         <li>
-          <a class="internalDFN" href="#dfn-perform-vibration">Perform vibration</a> with <var>valid pattern</var>.
+          对 <var>valid pattern</var> <a class="internalDFN" href="#dfn-perform-vibration">Perform vibration</a>。
         </li>
       </ol>
       <p>
-        To <dfn id="dfn-validate-and-normalize">validate and normalize</dfn> a vibration pattern given
-        <var>pattern</var>, run these steps:
+        为 <dfn id="dfn-validate-and-normalize">validate and normalize</dfn> 某一给定的振动模式
+        <var>pattern</var>，运行这些步骤： 
       </p>
       <ol>
         <li>
-          If <var>pattern</var> is a list, proceed to the next step.
-          Otherwise run the following substeps:
+          如果 <var>pattern</var> 是一个列表，则进入下一步。否则运行以下子步骤： 
           <ol>
             <li>
-              Let <var>list</var> be an initially empty list, and add
-              <var>pattern</var> to <var>list</var>.
+              设 <var>list</var> 为一个空的列表，并将
+              <var>pattern</var> 加入到 <var>list</var> 中。
             </li>
             <li>
-              Set <var>pattern</var> to <var>list</var>.
+              设 <var>pattern</var> 的值为 <var>list</var>。
             </li>
           </ol>
         </li>
         <li>
-          Let <var>max length</var> be an implementation-dependent maximum
-          length of <var>pattern</var>.
+          设 <var>max length</var> 为实现相关的 <var>pattern</var> 的最大长度值。
           <div class="note">
-            <div id="h-note2" role="heading" aria-level="3" class="note-title"><span>Note</span></div>
+            <div id="h-note2" role="heading" aria-level="3" class="note-title"><span>注</span></div>
             <div class="">
-              If the length of a pattern is greater than max length an
-              implementation of this API could consider breaking the request
-              effectively into multiple shorter requests internally to achieve
-              the same effect, rather than ignoring what follows the max length.
-              There are cases, however, where it is appropriate to ignore the
-              pattern exceeding the max length. An example is if the length is so
-              long that it would effectively create a denial of service attack on
-              the user. A web application might also make multiple requests if it
-              is known to the application that the length is too long for some
-              implementations and a possible gap in between patterns is
-              acceptable.
+              如果模式的长度大于最大长度，该 API 的实现可以考虑将此振动请求有效地分解成多个内部短请求，
+              来实现同样的效果，而不是忽略最大长度后面的请求。
+              然而，有些情况下忽略模式超过最大长度的部分是合时的。
+              一个例子是，如果长度太长,将会有效地创建一个拒绝服务攻击用户。
+              如果已知对某 web 应用程序来说某个长度太长时，该应用程序也可能采用多个请求；
+              模式之间可能存在的差距是可以接受的。
             </div>
           </div>
         </li>
         <li>
-          If the length of <var>pattern</var> is greater than
-          <var>max length</var>, truncate <var>pattern</var>, leaving only
-          the first <var>max length</var> entries.
+          如果 <var>pattern</var> 长度大于
+          <var>max length</var>，截断 <var>pattern</var>，仅保留前 <var>max length</var> 项。
           <div class="note">
-            <div id="h-note3" role="heading" aria-level="3" class="note-title"><span>Note</span></div>
+            <div id="h-note3" role="heading" aria-level="3" class="note-title"><span>注</span></div>
             <div class="" id="remove-last-entry">
-              If the length of the <var>pattern</var> is even and not zero then
-              the last entry in the pattern will have no effect so an
-              implementation can remove it from the <var>pattern</var> at this point.
+              如果 <var>pattern</var> 的长度是偶数并且非零，那么模式中的最后一项就会没有效果，因此实现可以在此从 <var>pattern</var> 中将之删除。
             </div>
           </div>
         </li>
         <li>
-          Let <var>max duration</var> be an implementation-dependent maximum
-          duration for a single vibration entry in a <var>pattern</var>.
+          设 <var>max duration</var> 为实现相关的 <var>pattern</var> 中单个振动项的最大持续时间值。
         </li>
         <li>
-          For each entry in <var>pattern</var> whose value is greater than
-          <var>max duration</var>, set the entry's value to
-          <var>max duration</var>.
+          对 <var>pattern</var> 中所有的持续时间值大于
+          <var>max duration</var> 的项，设置其值为
+          <var>max duration</var>。
         </li>
         <li>
-          Return <var>pattern</var>.
+          返回 <var>pattern</var>。
         </li>
       </ol>
       <p>
-        To <dfn id="dfn-perform-vibration">perform vibration</dfn> using <var>pattern</var>, run these
-        steps:
+        为使用 <var>pattern</var> <dfn id="dfn-perform-vibration">perform vibration</dfn> ，运行这些步骤： 
       </p>
       <ol>
         <li>
-          An implementation <em title="MAY" class="rfc2119">MAY</em> return false and terminate these steps.
+          算法的实现 <em title="MAY" class="rfc2119">MAY</em> 在此返回 false 并终止这些步骤。
           <div class="note">
-            <div id="h-note4" role="heading" aria-level="3" class="note-title"><span>Note</span></div>
+            <div id="h-note4" role="heading" aria-level="3" class="note-title"><span>注</span></div>
             <div class="">
-              For example, an implementation might abort the
-              algorithm because the user has set a preference indicating that
-              pages at a given origin should never be able to vibrate the device,
-              or an implementation might cap the total amount of time a page may
-              cause the device to vibrate and reject requests in excess of this
-              limit.
+              例如，用户设置了某些域的页面不得使设备振动，或者振动的总时间长度超过了页面允许的最大值从而拒绝振动请求，这些情况下算法实现可以停止算法运行。
             </div>
           </div>
         </li>
         <li>
-          If another instance of the <a class="internalDFN" href="#dfn-perform-vibration">perform vibration</a> algorithm is
-          already running, run the following substeps:
+          如果已经存在 <a class="internalDFN" href="#dfn-perform-vibration">perform vibration</a> 的算法实例，那么运行下列子步骤： 
           <ol>
             <li>
-              Abort that other instance of the <a class="internalDFN" href="#dfn-perform-vibration">perform vibration</a>
-              algorithm, if any.
+              中止任何其他正在 <a class="internalDFN" href="#dfn-perform-vibration">perform vibration</a> 的实例。
             </li>
             <li>
-              If <var>pattern</var> is an empty list, contains a single entry
-              with a value of 0, or if the device is unable to vibrate, then
-              return true and terminate these steps.
+              如果 <var>pattern</var> 是一个空列表，包含单独一项的值为 0，或者该设备不能振动，那么返回 true 并且终止这些步骤。
             </li>
           </ol>
         </li>
         <li>
-          Return true, and then continue running these steps asynchronously.
+          返回 true，然后继续异步执行后续步骤。
         </li>
         <li>
-          For each <var>time</var> in <var>pattern</var>, run the following
-          substeps:
+          对于 <var>pattern</var> 中的每一项，设其为  <var>time</var>，运行以下子步骤： 
           <ol>
             <li>
-              If the index of <var>time</var> is even (the first entry has
-              index 0), vibrate the device for <var>time</var> milliseconds.
+              如果 <var>time</var> 对应的索引为偶数（第一项的索引为 0 ），控制设备振动 <var>time</var> 毫秒。
             </li>
             <li>
-              Otherwise wait for <var>time</var> milliseconds.
+              否则等待 <var>time</var> 毫秒。
             </li>
           </ol>
         </li>
       </ol>
       <p>
-        When the
+        当 <code>Document</code> <a class="internalDFN" href="#dfn-browsing-context">browsing context</a> 上的
         <code><a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/PageVisibility/Overview.html#sec-visibilitychange-event">
-        visibilitychange</a></code> event [<cite><a href="#bib-PAGE-VISIBILITY" class="bibref">PAGE-VISIBILITY</a></cite>] is dispatched at
-        the <code>Document</code> in a <a class="internalDFN" href="#dfn-browsing-context">browsing context</a>, the
-        <a class="product-ua" href="#ua">user agent</a> <em title="MUST" class="rfc2119">MUST</em> abort the
-        already running <a class="internalDFN" href="#dfn-processing-vibration-patterns">processing vibration patterns</a> algorithm, if any.
+        visibilitychange</a></code> 事件 [<cite><a href="#bib-PAGE-VISIBILITY" class="bibref">PAGE-VISIBILITY</a></cite>] 触发时，
+        <a class="product-ua" href="#ua">用户代理</a> <em title="MUST" class="rfc2119">必须</em> 终止所有已经在运行的 <a class="internalDFN" href="#dfn-processing-vibration-patterns">processing vibration patterns</a> 算法。
       </p>
     </section>
     <section property="bibo:hasPart" resource="#examples" typeof="bibo:Chapter" id="examples" class="informative">
       <!--OddPage-->
       <h2 resource="#h-examples" id="h-examples"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>Examples</span></h2>
-      <p><em>This section is non-normative.</em></p>
+      <p><em>本章节不具有规范性。</em></p>
       <p>
-        In the following example the device will vibrate for 1000 milliseconds (ms):
+        以下演示如何让设备振动 1 秒：
       </p>
       <div class="example">
-        <div class="example-title"><span>Example 1</span></div>
-        <pre style="" class="example highlight prettyprint prettyprinted"><span class="com">// vibrate for 1000 ms</span><span class="pln">
+        <div class="example-title"><span>示例 1</span></div>
+        <pre style="" class="example highlight prettyprint prettyprinted"><span class="com">// 振动 1 秒</span><span class="pln">
 navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">);</span><span class="pln">
 
-</span><span class="com">// or alternatively</span><span class="pln">
+</span><span class="com">// 或者</span><span class="pln">
 navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span class="pun">([</span><span class="lit">1000</span><span class="pun">]);</span></pre>
       </div>
       <p>
-        In the following example the pattern will cause the device to vibrate
-        for 50 ms, be still for 100 ms, and then vibrate for 150 ms:
+        以下演示如何让设备先振动 50 毫秒，再停止 100 毫秒，再振动 150 毫秒：
       </p>
       <div class="example">
-        <div class="example-title"><span>Example 2</span></div>
+        <div class="example-title"><span>示例 2</span></div>
         <pre style="" class="example highlight prettyprint prettyprinted"><span class="pln">navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span class="pun">([</span><span class="lit">50</span><span class="pun">,</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln"> </span><span class="lit">150</span><span class="pun">]);</span></pre>
       </div>
       <p>
       </p>
       <p>
-        The following example cancels any existing vibrations:
+        以下演示如何取消振动：
       </p>
       <div class="example">
-        <div class="example-title"><span>Example 3</span></div>
-        <pre style="" class="example highlight prettyprint prettyprinted"><span class="com">// cancel any existing vibrations</span><span class="pln">
+        <div class="example-title"><span>示例 3</span></div>
+        <pre style="" class="example highlight prettyprint prettyprinted"><span class="com">// 取消所有振动</span><span class="pln">
 navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span><span class="pln">
 
-</span><span class="com">// or alternatively</span><span class="pln">
+</span><span class="com">// 或者</span><span class="pln">
 navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span class="pun">([]);</span></pre>
       </div>
     </section>
     <section property="bibo:hasPart" resource="#acknowledgements" typeof="bibo:Chapter" id="acknowledgements" class="appendix">
       <!--OddPage-->
-      <h2 resource="#h-acknowledgements" id="h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>Acknowledgements</span></h2>
+      <h2 resource="#h-acknowledgements" id="h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>致谢</span></h2>
       <p>
         The group is deeply indebted to Justin Lebar, Mounir Lamouri, Jonas
         Sicking, and the Mozilla WebAPI team for their contributions, and for
@@ -788,9 +745,9 @@ navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span 
     </section>
     <section property="bibo:hasPart" resource="#references" typeof="bibo:Chapter" id="references" class="appendix">
       <!--OddPage-->
-      <h2 resource="#h-references" id="h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>References</span></h2>
+      <h2 resource="#h-references" id="h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>参考文献</span></h2>
       <section property="bibo:hasPart" resource="#normative-references" typeof="bibo:Chapter" id="normative-references">
-        <h3 resource="#h-normative-references" id="h-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.1 </span>Normative references</span></h3>
+        <h3 resource="#h-normative-references" id="h-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.1 </span>规范性参考文献</span></h3>
         <dl resource="" class="bibliography">
           <dt id="bib-HTML5">[HTML5]</dt>
           <dd>Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Edward O'Connor; Silvia Pfeiffer. <a property="dc:requires" href="http://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. 28 October 2014. W3C Recommendation. URL: <a property="dc:requires" href="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</a></dd>
@@ -803,7 +760,7 @@ navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span 
         </dl>
       </section>
       <section property="bibo:hasPart" resource="#informative-references" typeof="bibo:Chapter" id="informative-references">
-        <h3 resource="#h-informative-references" id="h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.2 </span>Informative references</span></h3>
+        <h3 resource="#h-informative-references" id="h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.2 </span>信息性参考文献</span></h3>
         <dl resource="" class="bibliography">
           <dt id="bib-NOTIFICATIONS">[NOTIFICATIONS]</dt>
           <dd>Anne van Kesteren. <a property="dc:references" href="https://notifications.spec.whatwg.org/"><cite>Notifications API</cite></a>. Living Standard. URL: <a property="dc:references" href="https://notifications.spec.whatwg.org/">https://notifications.spec.whatwg.org/</a></dd>
