@@ -444,14 +444,14 @@
     <section property="dc:abstract" class="introductory" id="abstract">
       <h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">摘要</span></h2>
       <p>
-        本规范定义了一个 API，它提供了访问托管设备的振动机制。振动是一种触觉反馈。
+        本规范定义了一个接口，它提供了访问托管设备的振动机制。振动是一种触觉反馈。
       </p>
     </section>
     <section id="sotd" class="introductory">
       <h2 resource="#h-sotd" id="h-sotd"><span property="xhv:role" resource="xhv:heading">本文档状态</span></h2>
       <p>
         <em>本节描述本文档发布时状态，其他文档可能取代本文档。 <abbr title="World Wide Web Consortium">W3C</abbr> 最新发布的技术报告，
-        以及本技术报告的最新版本， 参见 <a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> 技术报告索引：</a>
+        以及本技术报告的最新版本， 参见 <a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> 技术报告索引</a>：
         http://www.w3.org/TR/</em>。
       </p>
       <p>
@@ -473,7 +473,7 @@
         欢迎反馈。
       </p>
       <p>
-        请参阅工作的<a href="http://w3c.github.io/test-results/vibration/20141118.html">实现报告</a>。
+        请参阅工作组的<a href="http://w3c.github.io/test-results/vibration/20141118.html">实现报告</a>。
       </p>
       <p>
         本文档已由 <abbr title="World Wide Web Consortium">W3C</abbr> 成员、软件开发者、 <abbr title="World Wide Web Consortium">W3C</abbr>
@@ -516,8 +516,8 @@
       <h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>引言</span></h2>
       <p><em>本章节不具有规范性。</em></p>
       <p>
-        振动 API 专门设计用于仅需简单触觉反馈的用例场景。那些需要细粒度控制的用例场景超出了本规范的范围。
-        该 API 并非用于通用的通知机制。通用的通知可使用<cite>通知 API</cite>
+        振动接口专门设计用于仅需简单触觉反馈的用例场景。那些需要细粒度控制的用例场景超出了本规范的范围。
+        该接口并非用于通用的通知机制。通用的通知可使用<cite>通知接口</cite>
         [<cite><a href="#bib-NOTIFICATIONS" class="bibref">NOTIFICATIONS</a></cite>]
         规范来处理。此外，决定是否启用振动也超出了本规范的范围。 
       </p>
@@ -529,14 +529,14 @@
         像其他不具有规范性的章节一样，本规范中所有指导方案、图表、示例以及注解都不具有规范性。
         本规范中其余部分均具有规范性。 
       </p>
-      <p id="respecRFC2119">关键词<em class="rfc2119" title="MAY">可以</em>和<em class="rfc2119" title="MUST">必须</em>的释义由 [<cite><a href="#bib-RFC2119" class="bibref">RFC2119</a></cite>]进行解释。
+      <p id="respecRFC2119">关键词<em class="rfc2119" title="MAY">可以</em>和<em class="rfc2119" title="MUST">必须</em>的释义由 [<cite><a href="#bib-RFC2119" class="bibref">RFC2119</a></cite>] 进行解释。
       </p>
       <p>
         本规范所定义的一致性标准条件仅适用于实现了规范所包含接口的<dfn id="ua">用户代理</dfn>。
       </p>
       <p>
         由于本规范使用了 WebIDL 规范及其术语，因此如果使用 ECMA 脚本对本规范定义的应用程序接口进行实现，
-        则必须保持实现与 ECMA 脚本绑定定义的 WebIDL 规范 [<cite><a href="#bib-WEBIDL" class="bibref">WEBIDL</a></cite>]相一致。 
+        则必须保持实现与 ECMA 脚本绑定定义的 WebIDL 规范 [<cite><a href="#bib-WEBIDL" class="bibref">WEBIDL</a></cite>] 相一致。 
       </p>
     </section>
     <section property="bibo:hasPart" resource="#terminology" typeof="bibo:Chapter" id="terminology">
@@ -607,7 +607,7 @@
           <div class="note">
             <div id="h-note2" role="heading" aria-level="3" class="note-title"><span>注</span></div>
             <div class="">
-              如果模式的长度大于最大长度，该 API 的实现可以考虑将此振动请求有效地分解成多个内部短请求，
+              如果模式的长度大于最大长度，该接口的实现可以考虑将此振动请求有效地分解成多个内部短请求，
               来实现同样的效果，而不是忽略最大长度后面的请求。
               然而，有些情况下忽略模式超过最大长度的部分是合时的。
               一个例子是，如果长度太长,将会有效地创建一个拒绝服务攻击用户。
@@ -643,7 +643,7 @@
       </p>
       <ol>
         <li>
-          算法的实现 <em title="MAY" class="rfc2119">MAY</em> 在此返回 false 并终止这些步骤。
+          算法的实现<em title="MAY" class="rfc2119">可以</em>在此返回 false 并终止这些步骤。
           <div class="note">
             <div id="h-note4" role="heading" aria-level="3" class="note-title"><span>注</span></div>
             <div class="">
@@ -686,7 +686,7 @@
     </section>
     <section property="bibo:hasPart" resource="#examples" typeof="bibo:Chapter" id="examples" class="informative">
       <!--OddPage-->
-      <h2 resource="#h-examples" id="h-examples"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>Examples</span></h2>
+      <h2 resource="#h-examples" id="h-examples"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>示例</span></h2>
       <p><em>本章节不具有规范性。</em></p>
       <p>
         以下演示如何让设备振动 1 秒：
@@ -726,7 +726,7 @@ navigator</span><span class="pun">.</span><span class="pln">vibrate</span><span 
       <p>
         工作组非常感谢 Justin Lebar、Mounir Lamouri、Jonas
         Sicking 和 Mozilla WebAPI 团队的贡献和提供 WebVibrator 原型作为初始输入。
-        感谢 Anne van Kesteren 建议如何使规范在其他文中被重用。
+        感谢 Anne van Kesteren 建议如何使规范重用于其他文档。
       </p>
     </section>
     <section property="bibo:hasPart" resource="#references" typeof="bibo:Chapter" id="references" class="appendix">
